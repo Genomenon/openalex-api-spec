@@ -2,7 +2,11 @@ export const filter = {
 	in: "query",
 	name: "filter",
 	required: false,
+	style: "form",
 	schema: {
-		type: "string",
+		type: "array",
+		items: {
+			type: "string",
+		}
 	},
 } satisfies ParameterObject;

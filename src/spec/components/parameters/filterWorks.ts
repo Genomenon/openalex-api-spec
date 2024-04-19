@@ -156,13 +156,16 @@ const worksFilters = [
 ];
 
 const filterWorksSchema: SchemaObject = {
-	pattern: new RegExp(
-		`^(${worksFilters
-			.map((key) => key.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"))
-			.map((s) => `(${s})`)
-			.join("|")}):.+`
-	).source,
-	type: "string",
+	type: "array",
+	items: {
+		type: "string",
+		pattern: new RegExp(
+			`^(${worksFilters
+				.map((key) => key.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"))
+				.map((s) => `(${s})`)
+				.join("|")}):.+`
+		).source,
+	},
 };
 
 export const filterWorks = {
