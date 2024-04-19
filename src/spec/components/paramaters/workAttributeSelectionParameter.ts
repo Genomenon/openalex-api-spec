@@ -5,7 +5,7 @@ import { workAttributes } from "~/spec/components/schemas/works/workAttributes";
 const workSelectSchema: SchemaObject = {
 	type: "array",
 	items: {
-		allOf: [
+		anyOf: [
 			refSchema({workAttributes}),
 			refSchema({baseSelectionAttributes}),
 		],
