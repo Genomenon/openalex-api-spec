@@ -16,6 +16,9 @@ export const meta = {
 		groups_count: {
 			type: ["string", "null"],
 		},
+		next_cursor: {
+			type: ["string", "null"],
+		}
 	},
 	required: [
 		"count",
