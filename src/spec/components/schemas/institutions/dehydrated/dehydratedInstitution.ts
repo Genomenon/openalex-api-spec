@@ -4,7 +4,7 @@ import {
 
 export const dehydratedInstitution: SchemaObject = {
 	// additionalProperties: false,
-	// type: "object",
+	type: "object",
 	properties: dehydratedInstitutionProperties,
 }
 
