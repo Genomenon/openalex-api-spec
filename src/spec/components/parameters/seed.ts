@@ -3,6 +3,7 @@ export const seed: ParameterObject = {
 	name: "seed",
 	required: false,
 	schema: {
-		description: "A seed value for sampling. Can be of any type."
+		description: "A seed value for sampling. Can be of any type.",
+		type: "string"
 	},
 };
